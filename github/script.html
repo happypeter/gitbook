@@ -294,16 +294,17 @@
 npm i gh-pages
 </code></pre><p>&#x7136;&#x540E;&#x521B;&#x5EFA; my-note/scripts/deploy-gh-pages.js</p>
 <p>&#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x662F;&#xFF1A;</p>
-<pre><code>&apos;use strict&apos;;
+<pre><code class="lang-js"><span class="hljs-meta">&apos;use strict&apos;</span>;
 
-var ghpages = require(&apos;gh-pages&apos;);
+<span class="hljs-keyword">var</span> ghpages = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gh-pages&apos;</span>);
 
 main();
 
-function main() {
-    ghpages.publish(&apos;./gh-pages&apos;, console.error.bind(console));
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>{
+    ghpages.publish(<span class="hljs-string">&apos;./gh-pages&apos;</span>, <span class="hljs-built_in">console</span>.error.bind(<span class="hljs-built_in">console</span>));
 }
-</code></pre><p>&#x4E0A;&#x9762;&#x7684;&#x811A;&#x672C;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x5C31;&#x662F;&#x628A;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684; gh-pages &#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#xFF0C;push &#x5230;&#x672C;&#x4ED3;&#x5E93;&#x7684; gh-pages &#x5206;&#x652F;&#x3002;</p>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x811A;&#x672C;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x5C31;&#x662F;&#x628A;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684; gh-pages &#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#xFF0C;push &#x5230;&#x672C;&#x4ED3;&#x5E93;&#x7684; gh-pages &#x5206;&#x652F;&#x3002;</p>
 <p>&#x7136;&#x540E;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; npm &#x811A;&#x672C; <code>deploy</code> &#xFF08; deploy &#x5C31;&#x662F;&#x90E8;&#x7F72;&#x7684;&#x610F;&#x601D;&#xFF09;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-json"><span class="hljs-string">&quot;scripts&quot;</span>: {
  <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-string">&quot;gitbook serve ./content ./gh-pages&quot;</span>,
@@ -354,7 +355,7 @@ function main() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第四节：部署脚本","level":"1.4.4","depth":2,"previous":{"title":"第三节：托管到 github pages 网站服务","level":"1.4.3","depth":2,"path":"github/deploy.md","ref":"./github/deploy.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"github/script.md","mtime":"2017-09-18T06:21:20.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-18T06:26:19.519Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第四节：部署脚本","level":"1.4.4","depth":2,"previous":{"title":"第三节：托管到 github pages 网站服务","level":"1.4.3","depth":2,"path":"github/deploy.md","ref":"./github/deploy.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"github/script.md","mtime":"2017-09-18T06:29:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-18T06:29:16.503Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
