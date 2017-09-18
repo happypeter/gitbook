@@ -1,6 +1,6 @@
 # Summary
 
-- [第一章：React 技巧](./react/index.md)
-  - [第一节：state 的使用](./react/state.md)
-  - [第二节：props 的使用](./react/props.md)
-- [第二章：Git 和 Github](./git/index.md)
+- [第一章：Gitbook 简介](1-intro.md)
+- [第二章：本地使用](./git/index.md)
+- [第三章：托管到 Github.com](./github/index.md)
+  - [第一节：备份笔记到 github](./github/5-push.md)
