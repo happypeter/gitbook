@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第三章：托管到 Github.com · GitBook</title>
+        <title>第二节：安装 Gitbook 创建笔记 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="push.html" />
+    <link rel="next" href="change.html" />
     
     
-    <link rel="prev" href="../local/change.html" />
+    <link rel="prev" href="markdown.html" />
     
 
     </head>
@@ -115,9 +115,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../local/">
+        <li class="chapter " data-level="1.3" data-path="./">
             
-                <a href="../local/">
+                <a href="./">
             
                     
                     第二章：本地使用
@@ -129,9 +129,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../local/markdown.html">
+        <li class="chapter " data-level="1.3.1" data-path="markdown.html">
             
-                <a href="../local/markdown.html">
+                <a href="markdown.html">
             
                     
                     第一节：Markdown 上手
@@ -142,9 +142,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../local/create.html">
+        <li class="chapter active" data-level="1.3.2" data-path="create.html">
             
-                <a href="../local/create.html">
+                <a href="create.html">
             
                     
                     第二节：安装 Gitbook 创建笔记
@@ -155,9 +155,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../local/change.html">
+        <li class="chapter " data-level="1.3.3" data-path="change.html">
             
-                <a href="../local/change.html">
+                <a href="change.html">
             
                     
                     第三节：修改笔记
@@ -173,9 +173,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="./">
+        <li class="chapter " data-level="1.4" data-path="../github/">
             
-                <a href="./">
+                <a href="../github/">
             
                     
                     第三章：托管到 Github.com
@@ -187,9 +187,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="push.html">
+        <li class="chapter " data-level="1.4.1" data-path="../github/push.html">
             
-                <a href="push.html">
+                <a href="../github/push.html">
             
                     
                     第一节：备份笔记到 github
@@ -200,9 +200,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="build.html">
+        <li class="chapter " data-level="1.4.2" data-path="../github/build.html">
             
-                <a href="build.html">
+                <a href="../github/build.html">
             
                     
                     第二节：编译 Gitbook 为静态页面
@@ -213,9 +213,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="deploy.html">
+        <li class="chapter " data-level="1.4.3" data-path="../github/deploy.html">
             
-                <a href="deploy.html">
+                <a href="../github/deploy.html">
             
                     
                     第三节：托管到 github pages 网站服务
@@ -226,9 +226,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="script.html">
+        <li class="chapter " data-level="1.4.4" data-path="../github/script.html">
             
-                <a href="script.html">
+                <a href="../github/script.html">
             
                     
                     第四节：部署脚本
@@ -274,7 +274,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第三章：托管到 Github.com</a>
+        <a href=".." >第二节：安装 Gitbook 创建笔记</a>
     </h1>
 </div>
 
@@ -289,7 +289,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>index</p>
+                                <h3 id="p3-&#x5B89;&#x88C5;-gitbook-&#x5E76;&#x521B;&#x5EFA;&#x7B14;&#x8BB0;">p3: &#x5B89;&#x88C5; Gitbook &#x5E76;&#x521B;&#x5EFA;&#x7B14;&#x8BB0;</h3>
+<p>&#x6839;&#x636E;<a href="https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md" target="_blank">&#x5B98;&#x7F51;&#x8BF4;&#x660E;</a> &#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x5148;&#x5B89;&#x88C5;</p>
+<pre><code>npm install gitbook-cli -g
+</code></pre><p>&#x7136;&#x540E;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7B14;&#x8BB0;&#x6587;&#x4EF6;&#x5939;</p>
+<pre><code>mkdir my-note
+</code></pre><p>&#x7136;&#x540E;&#x6267;&#x884C;</p>
+<pre><code>cd my-note
+gitbook init
+</code></pre><p>&#x8FD9;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;</p>
+<ul>
+<li>README.md &#x7684;&#x5185;&#x5BB9;&#x4F1A;&#x663E;&#x793A;&#x5728;&#x4E66;&#x76AE;&#x4E0A;</li>
+<li>SUMMARY.md &#x662F;&#x76EE;&#x5F55;</li>
+</ul>
+<p>&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x67E5;&#x770B;&#x548C;&#x7F16;&#x8F91;&#x4E66;&#x7C4D;</p>
+<pre><code>gitbook serve
+</code></pre><p>&#x8FD9;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7136;&#x540E;&#x5230; localhost:4000 &#x7AEF;&#x53E3;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FD9;&#x672C;&#x4E66;&#x4E86;&#x3002;</p>
+<p>&#x89C6;&#x9891;&#xFF1A;gitbook-1-intro</p>
 
                                 
                                 </section>
@@ -317,12 +333,12 @@
 
             
                 
-                <a href="../local/change.html" class="navigation navigation-prev " aria-label="Previous page: 第三节：修改笔记">
+                <a href="markdown.html" class="navigation navigation-prev " aria-label="Previous page: 第一节：Markdown 上手">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="push.html" class="navigation navigation-next " aria-label="Next page: 第一节：备份笔记到 github">
+                <a href="change.html" class="navigation navigation-next " aria-label="Next page: 第三节：修改笔记">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -333,7 +349,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第三章：托管到 Github.com","level":"1.4","depth":1,"next":{"title":"第一节：备份笔记到 github","level":"1.4.1","depth":2,"path":"github/push.md","ref":"./github/push.md","articles":[]},"previous":{"title":"第三节：修改笔记","level":"1.3.3","depth":2,"path":"local/change.md","ref":"./local/change.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"github/index.md","mtime":"2017-09-18T03:43:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-18T06:26:19.519Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第二节：安装 Gitbook 创建笔记","level":"1.3.2","depth":2,"next":{"title":"第三节：修改笔记","level":"1.3.3","depth":2,"path":"local/change.md","ref":"./local/change.md","articles":[]},"previous":{"title":"第一节：Markdown 上手","level":"1.3.1","depth":2,"path":"local/markdown.md","ref":"./local/markdown.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"local/create.md","mtime":"2017-09-18T06:13:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-18T06:26:19.519Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

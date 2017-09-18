@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第三章：托管到 Github.com · GitBook</title>
+        <title>第四节：部署脚本 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="push.html" />
     
-    
-    <link rel="prev" href="../local/change.html" />
+    <link rel="prev" href="deploy.html" />
     
 
     </head>
@@ -173,7 +171,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="./">
+        <li class="chapter " data-level="1.4" data-path="./">
             
                 <a href="./">
             
@@ -226,7 +224,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="script.html">
+        <li class="chapter active" data-level="1.4.4" data-path="script.html">
             
                 <a href="script.html">
             
@@ -274,7 +272,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第三章：托管到 Github.com</a>
+        <a href=".." >第四节：部署脚本</a>
     </h1>
 </div>
 
@@ -289,7 +287,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>index</p>
+                                <p>&#x4F7F;&#x7528;&#x81EA;&#x52A8;&#x5316;&#x811A;&#x672C;&#xFF0C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x6765;&#x4E0A;&#x4E00;&#x8282;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x3002;</p>
+<h3 id="&#x81EA;&#x52A8;&#x5316;&#x521B;&#x5EFA;&#x548C;&#x66F4;&#x65B0;-gh-pages">&#x81EA;&#x52A8;&#x5316;&#x521B;&#x5EFA;&#x548C;&#x66F4;&#x65B0; gh-pages</h3>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x91C7;&#x7528;&#x4E00;&#x4E2A; npm &#x5305;&#xFF0C;&#x6765;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x5B8C;&#x6210;&#x4E0A;&#x9762;&#x7684;&#x64CD;&#x4F5C;</p>
+<pre><code>cd my-note/
+npm i gh-pages
+</code></pre><p>&#x7136;&#x540E;&#x521B;&#x5EFA; my-note/scripts/deploy-gh-pages.js</p>
+<p>&#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x662F;&#xFF1A;</p>
+<pre><code>&apos;use strict&apos;;
+
+var ghpages = require(&apos;gh-pages&apos;);
+
+main();
+
+function main() {
+    ghpages.publish(&apos;./gh-pages&apos;, console.error.bind(console));
+}
+</code></pre><p>&#x4E0A;&#x9762;&#x7684;&#x811A;&#x672C;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x5C31;&#x662F;&#x628A;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684; gh-pages &#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#xFF0C;push &#x5230;&#x672C;&#x4ED3;&#x5E93;&#x7684; gh-pages &#x5206;&#x652F;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; npm &#x811A;&#x672C; <code>deploy</code> &#xFF08; deploy &#x5C31;&#x662F;&#x90E8;&#x7F72;&#x7684;&#x610F;&#x601D;&#xFF09;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json"><span class="hljs-string">&quot;scripts&quot;</span>: {
+ <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-string">&quot;gitbook serve ./content ./gh-pages&quot;</span>,
+ <span class="hljs-string">&quot;deploy&quot;</span>: <span class="hljs-string">&quot;node ./scripts/deploy-gh-pages.js&quot;</span>,
+},
+</code></pre>
+<p>&#x90A3;&#x4E48;&#xFF0C;&#x53EF;&#x4EE5;&#x6765;&#x8BD5;&#x8BD5;&#xFF0C;&#x4FDD;&#x8BC1; <code>npm start</code> &#x5904;&#x4E8E;&#x8FD0;&#x884C;&#x4E2D;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x7136;&#x540E;&#x8FD0;&#x884C;</p>
+<pre><code>npm run deploy
+</code></pre><p>&#x6CE8;&#xFF1A;&#x5982;&#x679C;&#x6700;&#x540E;&#x8FD4;&#x56DE; <code>undefined</code> &#x5B57;&#x6837;&#xFF0C;&#x8868;&#x793A;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#xFF0C;&#x90E8;&#x7F72;&#x6210;&#x529F;&#x3002;</p>
+<p>&#x5C31;&#x53EF;&#x4EE5;&#x628A;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x4E66;&#x7A3F; push &#x5230;&#x8FDC;&#x7AEF;&#x4ED3;&#x5E93;&#x7684; gh-pages &#x5206;&#x652F;&#x4E86;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x5230; <a href="https://happypeter.github.io/my-note" target="_blank">https://happypeter.github.io/my-note</a> &#x8FD9;&#x4E2A;&#x94FE;&#x63A5;&#xFF0C;&#x770B;&#x5230;&#x4E66;&#x4E86;&#x3002;</p>
+<p>&#x8FD9;&#x6837;&#xFF0C;&#x5927;&#x529F;&#x544A;&#x6210;&#x3002;</p>
 
                                 
                                 </section>
@@ -317,14 +342,10 @@
 
             
                 
-                <a href="../local/change.html" class="navigation navigation-prev " aria-label="Previous page: 第三节：修改笔记">
+                <a href="deploy.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 第三节：托管到 github pages 网站服务">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="push.html" class="navigation navigation-next " aria-label="Next page: 第一节：备份笔记到 github">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -333,7 +354,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第三章：托管到 Github.com","level":"1.4","depth":1,"next":{"title":"第一节：备份笔记到 github","level":"1.4.1","depth":2,"path":"github/push.md","ref":"./github/push.md","articles":[]},"previous":{"title":"第三节：修改笔记","level":"1.3.3","depth":2,"path":"local/change.md","ref":"./local/change.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"github/index.md","mtime":"2017-09-18T03:43:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-18T06:26:19.519Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第四节：部署脚本","level":"1.4.4","depth":2,"previous":{"title":"第三节：托管到 github pages 网站服务","level":"1.4.3","depth":2,"path":"github/deploy.md","ref":"./github/deploy.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"github/script.md","mtime":"2017-09-18T06:21:20.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-18T06:26:19.519Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
