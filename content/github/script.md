@@ -1,16 +1,19 @@
+使用自动化脚本，一个命令来上一节中的所有操作。
+
+### 自动化创建和更新 gh-pages
 
 所以，我们采用一个 npm 包，来帮助我们完成上面的操作
 
 ```
 cd my-note/
-npm i --save gh-pages
+npm i gh-pages
 ```
 
 然后创建 my-note/scripts/deploy-gh-pages.js
 
 里面的内容是：
 
-```
+```js
 'use strict';
 
 var ghpages = require('gh-pages');

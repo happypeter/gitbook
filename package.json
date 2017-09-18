@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "gitbook serve ./content",
-    "build": "gitbook build ./content ./gh-pages"
+    "build": "gitbook build ./content ./gh-pages",
+    "deploy": "node ./scripts/deploy-gh-pages.js",
+    "publish": "npm run build&&npm run deploy"
   },
   "repository": {
     "type": "git",
@@ -17,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/happypeter/gitbook/issues"
   },
-  "homepage": "https://github.com/happypeter/gitbook#readme"
+  "homepage": "https://github.com/happypeter/gitbook#readme",
+  "dependencies": {
+    "gh-pages": "^1.0.0"
+  }
 }
